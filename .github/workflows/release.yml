@@ -18,6 +18,10 @@ jobs:
           ruby-version: '2.6'
       - name: Build
         run: ./build
+      - name: Set variables
+        run: |
+          VER=$(cat ./version)
+          echo "VERSION=$VER" >> $GITHUB_ENV
       - name: Create Release
         id:
           create_release
@@ -25,8 +29,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ github.ref }}-${{ env.VERSION }}
+          release_name: Release ${{ github.ref }}-${{ env.VERSION }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -37,5 +41,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: ./dist/custom_css.tar.gz
-          asset_name: custom_css.tar.gz
+          asset_name: custom_css-${{ env.VERSION }}.tar.gz
           asset_content_type: application/tar+gzip
