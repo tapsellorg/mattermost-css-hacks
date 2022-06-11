@@ -14,7 +14,7 @@
 }
 
 .post .post__content {
-  background: #0001;
+  background: var(--center-channel-color-04,#0001);
   padding: 1rem 0.5rem;
   border-radius: 4px;
 }
