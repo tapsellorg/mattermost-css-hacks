@@ -22,7 +22,7 @@ end
 Dir.chdir(path) do
 
 
-  css = File.read("discourse.css")
+  css = File.read("styles.css")
 
   bundle = File.read("templates/custom_css_bundle.js")
 
