@@ -5,7 +5,7 @@
 /*  font-family: 'Lato', sans-serif;*/
 /*}*/
 
-.post__body {font-family: 'Vazirmatn', "Open Sans",sans-serif;}
+.post__body,.app__body .custom-textarea  {font-family: 'Vazirmatn', "Open Sans",sans-serif;}
 
 .post .post-edited__indicator {direction: ltr;}
 
@@ -15,6 +15,10 @@
 
 .post .post__content {
   background: var(--center-channel-color-04,#0001);
-  padding: 1rem 0.5rem;
-  border-radius: 4px;
+}
+
+.post:not(.same--user) .post__content {
+  padding: 1rem 0.5rem 0;
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid var(--center-channel-color-04,#0001);
 }
