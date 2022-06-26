@@ -1,11 +1,7 @@
 /* change font-family and increase size for flagged users */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
-/*.app__body.font--open_sans {*/
-/*  font-family: 'Lato', sans-serif;*/
-/*}*/
-
-.post__body,.app__body .custom-textarea  {font-family: 'Vazirmatn', "Open Sans",sans-serif;}
+.post__body,.app__body .custom-textarea,.app__body h1, .app__body h2, .app__body h3  {font-family: 'Vazirmatn', "Open Sans",sans-serif;}
 
 .post .post-edited__indicator {direction: ltr;}
 
