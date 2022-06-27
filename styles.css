@@ -1,20 +1,35 @@
 /* change font-family and increase size for flagged users */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap");
 
-.post__body,.app__body .custom-textarea,.app__body h1, .app__body h2, .app__body h3  {font-family: 'Vazirmatn', "Open Sans",sans-serif;}
+.post__body,
+.app__body .custom-textarea,
+.app__body h1,
+.app__body h2,
+.app__body h3 {
+  font-family: "Vazirmatn", "Open Sans", sans-serif;
+}
 
-.post .post-edited__indicator {direction: ltr;}
+.post .post-edited__indicator {
+  direction: ltr;
+}
 
-.form-control, .post p {
+.form-control,
+.post p {
   font-size: 15px;
 }
 
 .post .post__content {
-  background: var(--center-channel-color-04,#0001);
+  background: var(--center-channel-color-04, #0001);
 }
 
 .post:not(.same--user) .post__content {
   padding: 1rem 0.5rem 0;
   border-radius: 4px 4px 0 0;
-  border-top: 1px solid var(--center-channel-color-04,#0001);
+  border-top: 1px solid var(--center-channel-color-04, #0001);
+}
+
+.post .post__body ul,
+.post .post__body ol {
+  display: inline-block;
+  direction: inherit;
 }
